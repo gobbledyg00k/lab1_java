@@ -23,8 +23,8 @@ public class StackCalculator {
         try {
             CONFIG.load(StackCalculator.class.getResourceAsStream(CONFIG_FILENAME));
         } catch (IOException err) {
-            logger.error("File read error" + err);
-            System.err.println("File read error.");
+            logger.error("Properties load error" + err);
+            System.err.println("Properties load error.");
             throw new RuntimeException(err);
         }
     }

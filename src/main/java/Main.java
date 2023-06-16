@@ -22,7 +22,11 @@ public class Main {
             source = System.in;
         }
         BufferedReader in = new BufferedReader(new InputStreamReader(source));
-        StackCalculator calc = new StackCalculator();
-        calc.calculations(in);
+        try{
+            StackCalculator calc = new StackCalculator();
+            calc.calculations(in);
+        } catch (Exception e){
+            System.exit(0);
+        }
     }
 }
